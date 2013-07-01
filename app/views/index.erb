@@ -1,0 +1,13 @@
+<div class="container">
+  <h1>Welcome to my Notes app!</h1>
+  
+  <form action='/create' method='get'>
+    <input type='submit' value='create new note'>
+  </form>
+
+  <ul>
+  <% @notes.each do |note| %>
+    <li><a href="/notes/<%=note.id%>"><%= note.title %></a></li>
+  <% end %>
+  </ul>
+</div>

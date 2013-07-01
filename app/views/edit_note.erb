@@ -1,0 +1,15 @@
+<div class='container'>		
+	<h2>Edit Note </h2>
+
+	<form id='edit_note' action='/edit' method='post'>
+		Title: <input type='text' name='title' value='<%=@note.title%>'><br><br>
+		Content: <input type='text' name='content' value='<%=@note.content%>'><br><br>
+		<input type='hidden' name='id' value='<%=@note.id%>'>
+		<input type='submit' value='Update Note'>
+	</form>
+	<br><br>
+	<form id='delete_note' action='/delete' method='post'>
+		<input type='hidden' name='id' value='<%=@note.id%>'>
+		<input type='submit' value='Delete Note'>
+	</form>
+</div>
